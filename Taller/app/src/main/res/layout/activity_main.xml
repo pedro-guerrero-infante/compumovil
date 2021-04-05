@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Taller 1"
+        android:textSize="40dp"
+        android:id="@+id/Titulo"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Titulo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/BotonFibonacci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fibonacci"
+                android:onClick="fibonacci"
+                >
+            </Button>
+
+            <EditText
+                android:id="@+id/Posiciones"
+                android:hint="Posiciones..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_below="@id/BotonFibonacci">
+                >
+            </EditText>
+
+            <Button
+                android:id="@+id/BotonFactorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Factorial"
+                android:layout_below="@id/Posiciones"
+                android:onClick="factorial"
+                >
+            </Button>
+
+            <Spinner
+                android:id="@+id/Numeros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/NumerosEjemplos"
+                android:layout_below="@id/BotonFactorial"
+                />
+
+            <Button
+                android:id="@+id/BotonPaises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paises"
+                android:layout_below="@id/Numeros"
+                android:onClick="paises"
+                >
+            </Button>
+
+            <TextView
+                android:id="@+id/vecesFactorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BotonPaises"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/vecesFibonacci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vecesFactorial"
+                >
+            </TextView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

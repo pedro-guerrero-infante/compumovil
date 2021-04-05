@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallePais">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nombrePais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/capital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombrePais"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/nombrePaisInt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/capital"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/sigla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombrePaisInt"
+                >
+            </TextView>
+
+            <Button
+                android:id="@+id/BotonVolver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="volver"
+                android:onClick="volver"
+                android:layout_below="@id/sigla"
+                >
+            </Button>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

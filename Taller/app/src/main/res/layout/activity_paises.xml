@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Paises">
+
+    <Button
+        android:id="@+id/BotonVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="volver"
+        android:onClick="volver"
+        >
+    </Button>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:fillViewport="true"
+        android:layout_below="@id/BotonVolver">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            ....
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ListaPaises"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                />
+            ....
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
